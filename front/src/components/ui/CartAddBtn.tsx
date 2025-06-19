@@ -38,7 +38,7 @@ function CartAddBtn({ product }: { product: Partial<IProduct> }) {
         onClick={addOnClick}
         disabled={isProductInCart(product.id || 0)}
         className={`flex gap-2 items-center justify-center w-full rounded-md text-white text-sm font-medium px-4 py-2 transition
-          bg-primary-light hover:bg-primary-default
+          bg-secondary hover:bg-primary
           ${isProductInCart(product.id || 0) ? "opacity-60 cursor-not-allowed bg-gray-400 hover:bg-gray-400" : ""}
         `}
       >

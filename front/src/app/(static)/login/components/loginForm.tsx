@@ -80,7 +80,7 @@ export default function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="max-w-sm mx-auto mt-5 space-y-4 bg-secondary rounded-lg p-6">
+    <form onSubmit={handleSubmit} noValidate className="max-w-sm mx-auto mt-5 space-y-4 bg-dark rounded-lg p-6">
       <div>
         <label htmlFor="email" className="block text-sm text-white font-medium">
           Correo electrónico

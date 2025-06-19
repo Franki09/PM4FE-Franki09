@@ -61,7 +61,7 @@ const RegisterForm: NextPage = () => {
   };
 
   return (
-    <div className="bg-secondary rounded-md shadow-lg p-6 max-w-md mx-auto mt-5">
+    <div className="bg-dark rounded-md shadow-lg p-6 max-w-md mx-auto mt-5">
       <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
         {/* {({ isValid, dirty }) => ( */}
         <Form>

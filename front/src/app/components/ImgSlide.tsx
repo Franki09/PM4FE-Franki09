@@ -26,7 +26,7 @@ export default function ImgSlide() {
 
   return (
     <div className="w-screen overflow-hidden pb-10 bg-blueish">
-      <h2 className="m-auto p-4 text-center text-3xl text-secondary">Un vistazo a nuestros productos: </h2>
+      <h2 className="m-auto p-4 text-center text-3xl text-dark">Un vistazo a nuestros productos: </h2>
 
       <Slider {...settings}>
         {images.map((src, index) => (

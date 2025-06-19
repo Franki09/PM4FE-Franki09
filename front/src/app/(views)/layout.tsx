@@ -13,8 +13,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <header>
         <AuthNav />
       </header>
-      <main className="bg-blueish">{children}</main>
-      <footer className=" flex justify-between bg-primary-light text-white p-4">
+      <main className="bg-blueish min-h-screen">{children}</main>
+      <footer className=" flex justify-between bg-secondary text-white p-4">
         <span>Franco Gomez | Proyecto M4</span>
         <span>2025</span>
       </footer>

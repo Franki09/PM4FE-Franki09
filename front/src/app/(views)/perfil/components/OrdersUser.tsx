@@ -36,27 +36,28 @@ function OrdersUser() {
       {orders.length > 0 ? (
         orders.map((order) => (
           <div key={order.id} className="mb-4">
-            <h3 className=" text-gray-300 text-lg font-semibold">Orden #{order.id}</h3>
-            <p className="text-gray-300">
-              <strong>Estado:</strong> {order.status}
+            <h3 className=" text-secondary text-lg font-semibold underline pb-2">Orden #{order.id}</h3>
+            <p className="text-neutral">
+              <strong className=" text-secondary">Estado:</strong> {order.status}
             </p>
-            <p className="text-gray-300">
-              <strong>Fecha:</strong> {new Date(order.date).toLocaleDateString()}
+            <p className="text-neutral">
+              <strong className=" text-secondary">Fecha:</strong> {new Date(order.date).toLocaleDateString()}
             </p>
-            <ul className="text-gray-300 list-disc pl-5">
+            <ul className="text-neutral list-disc pl-5">
               {order.products.map((product) => (
                 <li key={product.id}>
-                  (x1) {product.name} - ${product.price}
+                  (x1) {product.name} - <span className="text-accent"> ${product.price} </span>
                 </li>
               ))}
             </ul>
-            <p className="text-gray-300 font-semibold mt-2 list-none">
-              Total: ${order.products.reduce((sum, product) => sum + product.price, 0)}
+            <p className="text-neutral mt-2 list-none text-xl">
+              <strong className="text-secondary">Total: </strong>
+              <strong className="text-accent">${order.products.reduce((sum, product) => sum + product.price, 0)} </strong>
             </p>
           </div>
         ))
       ) : (
-        <p>No has realizado ninguna orden aún.</p>
+        <p className="text-neutral">No has realizado ninguna orden aún. Agrega algo al carrito para poder crear una orden.</p>
       )}
     </>
   );

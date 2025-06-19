@@ -62,7 +62,7 @@ const CreateOrderBtn = () => {
     <>
       <button
         onClick={handleCreateOrder}
-        className="self-center rounded-full w-[80%] bg-primary-light hover:bg-primary-default transform p-2 mb-5"
+        className="self-center rounded-full w-[80%] border-4 border-transparent bg-primary hover:border-secondary p-3 mb-5 transform"
       >
         Finalizar Compra
       </button>

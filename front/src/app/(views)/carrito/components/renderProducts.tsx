@@ -23,7 +23,7 @@ function RenderProducts() {
         ? cart.map((product) => (
             <div
               key={product.id}
-              className="group flex flex-row justify-between items-center w-full pr-8 bg-secondary border-8 border-transparent rounded-lg  hover:border-primary-default"
+              className="group flex flex-row justify-between items-center w-full pr-8 bg-dark border-8 border-transparent rounded-lg  hover:border-accent"
             >
               <Image
                 className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
@@ -34,14 +34,14 @@ function RenderProducts() {
               />
 
               <div className="flex flex-col items-start p-4 leading-normal">
-                <h2 className="mb-2 text-2xl font-bold tracking-tight text-primary-default">{product.name}</h2>
+                <h2 className="mb-2 text-2xl font-bold tracking-tight text-primary">{product.name}</h2>
                 <h3 className="mb-1 text-lg font-semibold text-yellow-500">Precio: {product.price}</h3>
-                <p className="text-sm font-medium text-primary-light">Stock: {product.stock}</p>
+                <p className="text-sm font-medium text-dark rounded-full bg-blueish p-1">Stock: {product.stock}</p>
               </div>
               <div className="flex flex-col w-max items-center self-center">
                 <button
                   onClick={() => onDelete(product)}
-                  className="rounded-full w-full bg-red-500 hover:bg-red-800 transform p-4"
+                  className="rounded-full w-full bg-red-600 transform p-4 hover:animate-shake"
                 >
                   Eliminar del <br /> Carrito{" "}
                 </button>

@@ -18,8 +18,8 @@ export default async function ProductDetail(props: { params: Params; searchParam
 
   return (
     <>
-      <div className="max-w-3xl mx-auto my-5 bg-secondary rounded-lg p-8 border-4 border-primary-default">
-        <h1 className="text-3xl font-bold text-primary-default mb-8 text-center">Detalle del producto</h1>
+      <div className="max-w-3xl mx-auto my-5 bg-dark rounded-lg p-8 border-4 border-primary">
+        <h1 className="text-3xl font-bold text-primary mb-8 text-center">Detalle del producto</h1>
         {product ? (
           <div className="flex flex-col md:flex-row items-center gap-8">
             <Image
@@ -27,12 +27,12 @@ export default async function ProductDetail(props: { params: Params; searchParam
               alt={product.name}
               width={400}
               height={400}
-              className="rounded-lg object-cover bg-primary-light"
+              className="rounded-lg object-cover bg-secondary"
               priority
             />
 
             <div className="flex-1">
-              <h2 className="text-2xl font-semibold text-primary-light mb-4">{product.name}</h2>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">{product.name}</h2>
               <p className="text-gray-700 mb-4">{product.description}</p>
               <div className="flex items-center gap-6 mb-4">
                 <span className="text-lg font-bold text-primary">Precio: ${product.price}</span>
