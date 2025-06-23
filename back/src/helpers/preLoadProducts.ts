@@ -86,7 +86,8 @@ const productsToPreLoad: IProduct[] = [
     price: 1199,
     description:
       "Ultradelgada y potente, la Dell XPS 13 Plus ofrece una experiencia premium con pantalla infinita y procesadores Intel de última generación.",
-    image: "https://ik.imagekit.io/1yfqjkehz/s-l1200.jpg?updatedAt=1749338615376",
+    image:
+      "https://ik.imagekit.io/1yfqjkehz/qPVnzr8umKIJxQy8z7Cc4C0Gg9jv5TXipHRZnxuyUsU96G8LvU91KS44Yn_eLF1sOspiO8QwScBsPb_fQboBUWefxE39vTwyFttpjaE8YithcCdhVBnQNSVAVz_aseo2hD1Sbbhy4gq8XbSsjVb7ZYY?updatedAt=1750380329129",
     categoryId: 2,
     stock: 10,
   },
@@ -105,7 +106,8 @@ const productsToPreLoad: IProduct[] = [
     price: 749,
     description:
       "Reloj multideporte premium con GPS, mapas topográficos y sensores avanzados para seguimiento de salud y entrenamiento.",
-    image: "https://ik.imagekit.io/1yfqjkehz/fenix-7-pro-m.jpg?updatedAt=1749338617293",
+    image:
+      "https://ik.imagekit.io/1yfqjkehz/fenix7Pro_HR_4000.3_e3e3fc4c-706a-4800-850d-5732531bc077.png_v=1717056324?updatedAt=1750380330087",
     categoryId: 4,
     stock: 10,
   },
@@ -141,7 +143,7 @@ const productsToPreLoad: IProduct[] = [
     price: 1299,
     description:
       "La HP Spectre x360 combina potencia y versatilidad con su diseño convertible, procesador Intel Core i7 y pantalla táctil 4K.",
-    image: "https://ik.imagekit.io/1yfqjkehz/7fq48av-01.jpg_v=1678166401?updatedAt=1749338622504",
+    image: "https://ik.imagekit.io/1yfqjkehz/c07760988__59075.png?updatedAt=1750380328507",
     categoryId: 2,
     stock: 10,
   },
@@ -203,7 +205,7 @@ const productsToPreLoad: IProduct[] = [
     name: "Samsung Galaxy Tab S8",
     price: 699,
     description: "Tablet Android con pantalla AMOLED de 11 pulgadas, S Pen incluido y rendimiento fluido para trabajo y ocio.",
-    image: "https://ik.imagekit.io/1yfqjkehz/D_NQ_NP_830800-MLA84538068932_052025-O.webp?updatedAt=1749677500820",
+    image: "https://ik.imagekit.io/1yfqjkehz/M-839086-1.png_v=638162135312230000?updatedAt=1750380327654",
     categoryId: 3,
     stock: 10,
   },
@@ -211,25 +213,27 @@ const productsToPreLoad: IProduct[] = [
     name: "Fitbit Versa 4",
     price: 229,
     description: "Smartwatch fitness con seguimiento continuo de ritmo cardíaco, GPS integrado y monitoreo de sueño avanzado.",
-    image: "https://ik.imagekit.io/1yfqjkehz/FitbitVersa4FitnessSmartwatch1.png_v=1724662219?updatedAt=1749338627545",
+    image:
+      "https://ik.imagekit.io/1yfqjkehz/fitbit-versa-4-smartwatch-waterfall-blue-platinum-front-right-view.png?updatedAt=1750380331152",
     categoryId: 4,
-    stock: 10,
+    stock: 0,
   },
   {
     name: "Sony LinkBuds S",
     price: 199,
     description: "Auriculares inalámbricos con sonido de alta resolución, diseño abierto y cancelación activa de ruido.",
-    image: "https://ik.imagekit.io/1yfqjkehz/D_NQ_NP_752571-MLU75867852307_042024-O.webp?updatedAt=1749677501413",
+    image:
+      "https://ik.imagekit.io/1yfqjkehz/5_Sony_LinkBuds_S_Truly_Wireless_Noise_Cancelling_Earbuds_480x480.png_v=1722720584?updatedAt=1750380327097",
     categoryId: 5,
-    stock: 10,
+    stock: 0,
   },
   {
     name: "Chipolo CARD Spot",
     price: 45,
     description: "Rastreador compatible con Apple Find My, con forma de tarjeta para billeteras y objetos delgados.",
-    image: "https://ik.imagekit.io/1yfqjkehz/D_NQ_NP_963850-MLA85716636015_062025-O.webp?updatedAt=1749677502308",
+    image: "https://ik.imagekit.io/1yfqjkehz/2_Chipolo_CARD_Spot.png_v=1710461319&width=1500?updatedAt=1750380330531",
     categoryId: 6,
-    stock: 10,
+    stock: 0,
   },
 ];
 
