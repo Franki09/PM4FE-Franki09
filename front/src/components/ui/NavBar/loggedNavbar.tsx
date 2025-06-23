@@ -10,9 +10,10 @@ import { useCartContext } from "@/context/cartContext";
 
 const LoggedNavbar = () => {
   const { resetUserData } = useAuthContext();
-  const { total } = useCartContext();
+  const { total, resetCart } = useCartContext();
   const logout = () => {
     resetUserData();
+    resetCart();
     location.href = "/inicio";
   };
 
