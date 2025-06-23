@@ -13,8 +13,15 @@ const Inicio = async () => {
   const { products } = await getData();
   return (
     <>
-      <Image src={"/bannerInicio.png"} alt="Banner" width={1400} height={500} quality={100} className="mx-auto object-cover" />
-      <h1 className="text-3xl font-bold underline p-10">Nuestros Productos:</h1>
+      <Image
+        src={"/bannerInicioFinal.png"}
+        alt="Banner"
+        width={1400}
+        height={500}
+        quality={100}
+        className="mx-auto object-cover"
+      />
+      <h1 className="text-3xl font-bold underline p-10 font-unbounded">Nuestros Productos:</h1>
       <ProductList products={products || []} />
     </>
   );

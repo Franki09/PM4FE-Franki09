@@ -18,13 +18,13 @@ const LoggedNavbar = () => {
 
   return (
     <nav className="bg-primary flex justify-between items-center p-1 px-14 ">
-      <Image src="/logoPagina.png" alt="Logo" className="h-24 w-24" width={40} height={40} />
+      <Image src="/LogoPagFinal.png" alt="Logo" className="h-24 w-24" width={40} height={40} />
       <ul className="flex gap-6">
         <li>
           <Link href="/inicio" className="group flex flex-col items-center relative text-dark">
             <div className="flex items-center gap-2">
               <FaHome className="text-2xl" />
-              <span>Inicio</span>
+              <span className="font-oswald text-2xl">Inicio</span>
             </div>
 
             {/* Línea inferior */}
@@ -41,7 +41,7 @@ const LoggedNavbar = () => {
                 </span>
               )}
 
-              <span>Ver Carrito</span>
+              <span className="font-oswald text-2xl">Ver Carrito</span>
             </div>
 
             {/* Línea inferior */}
@@ -52,7 +52,7 @@ const LoggedNavbar = () => {
           <Link href="/perfil" className="group flex flex-col items-center relative text-dark">
             <div className="flex items-center gap-2">
               <MdAccountCircle className="text-2xl" />
-              <span>Perfil</span>
+              <span className="font-oswald text-2xl">Perfil</span>
             </div>
 
             {/* Línea inferior */}
@@ -62,7 +62,9 @@ const LoggedNavbar = () => {
         <li className="group flex flex-col items-center relative text-dark">
           <div className="flex items-center gap-2">
             <BiLogOut className="text-2xl" />
-            <button onClick={logout}>Cerrar Sesion</button>
+            <button onClick={logout} className="font-oswald text-2xl">
+              Cerrar Sesion
+            </button>
           </div>
 
           {/* Línea inferior */}

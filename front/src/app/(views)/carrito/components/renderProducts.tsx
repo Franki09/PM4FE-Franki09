@@ -34,14 +34,16 @@ function RenderProducts() {
               />
 
               <div className="flex flex-col items-start p-4 leading-normal">
-                <h2 className="mb-2 text-2xl font-bold tracking-tight text-primary">{product.name}</h2>
-                <h3 className="mb-1 text-lg font-semibold text-yellow-500">Precio: {product.price}</h3>
-                <p className="text-sm font-medium text-dark rounded-full bg-blueish p-1">Stock: {product.stock}</p>
+                <h2 className="mb-1 text-3xl font-oswald font-bold tracking-tight text-primary">{product.name}</h2>
+                <h3 className="mb-1 text-xl font-oswald font-semibold text-yellow-500 py-2"> Precio: {product.price}</h3>
+                <p className="text-sm font-roboto-condensed font-medium text-dark rounded-full bg-blueish py-1 px-2">
+                  Stock: {product.stock}
+                </p>
               </div>
               <div className="flex flex-col w-max items-center self-center">
                 <button
                   onClick={() => onDelete(product)}
-                  className="rounded-full w-full bg-red-600 transform p-4 hover:animate-shake"
+                  className="font-roboto-condensed text-lg rounded-full w-full bg-red-600 transform p-4 hover:animate-shake"
                 >
                   Eliminar del <br /> Carrito{" "}
                 </button>

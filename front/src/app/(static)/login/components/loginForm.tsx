@@ -18,7 +18,7 @@ interface FormErrors {
 
 export default function LoginForm() {
   usePublic();
-  const [formData, setFormData] = useState<FormDataLogin>({ email: "fran@gmail.com", password: "Franki123" });
+  const [formData, setFormData] = useState<FormDataLogin>({ email: "", password: "" });
   const [errors, setErrors] = useState<FormErrors>({});
 
   // const [saveUserData] = useAuthContext();
@@ -80,9 +80,9 @@ export default function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="max-w-sm mx-auto mt-5 space-y-4 bg-dark rounded-lg p-6">
+    <form onSubmit={handleSubmit} noValidate className="max-w-sm mx-auto mt-5 space-y-4 bg-dark rounded-lg p-8">
       <div>
-        <label htmlFor="email" className="block text-sm text-white font-medium">
+        <label htmlFor="email" className="block text-primary font-medium font-oswald text-xl">
           Correo electrónico
         </label>
         <input
@@ -91,13 +91,13 @@ export default function LoginForm() {
           id="email"
           value={formData.email}
           onChange={handleChange}
-          className="mt-1 w-full border bg-blueish p-2 rounded"
+          className="mt-1 w-full border bg-secondary p-2 rounded text-dark"
         />
         {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
       </div>
 
       <div>
-        <label htmlFor="password" className="block text-sm text-white font-medium">
+        <label htmlFor="password" className="block text-primary font-medium font-oswald text-xl">
           Contraseña
         </label>
         <input
@@ -106,12 +106,15 @@ export default function LoginForm() {
           id="password"
           value={formData.password}
           onChange={handleChange}
-          className="mt-1 w-full border bg-blueish p-2 rounded"
+          className="mt-1 w-full border bg-secondary p-2 rounded text-dark"
         />
         {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
       </div>
 
-      <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+      <button
+        type="submit"
+        className="w-full bg-primary text-neutral py-2 rounded hover:bg-opacity-60 transition font-roboto-condensed text-xl"
+      >
         Iniciar sesión
       </button>
     </form>

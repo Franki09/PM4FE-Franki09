@@ -18,16 +18,16 @@ const ProductCard: React.FC<Partial<IProduct>> = (product) => {
         />
       </div>
       <div className="px-5 pb-5">
-        <h5 className="text-xl font-semibold tracking-tight text-primary">{name}</h5>
+        <h3 className="text-3xl font-semibold font-oswald tracking-tight text-primary">{name}</h3>
 
         <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-yellow-500">${price}</span>
+          <span className="text-2xl font-bold font-oswald text-yellow-500">${price}</span>
         </div>
 
         <div className="flex justify-between items-center mt-4 space-x-2">
           <Link
             href={`/detalle-producto/${id}/${name?.toLowerCase().replace(/\s+/g, "-")}`}
-            className="w-full text-center rounded-md bg-secondary hover:bg-primary text-white text-sm font-medium px-4 py-2 transition"
+            className="w-full text-center rounded-md bg-secondary hover:bg-primary text-white text-lg font-medium font-roboto-condensed px-4 py-2 transition"
           >
             Ver detalles
           </Link>

@@ -26,7 +26,7 @@ const CreateOrderBtn = () => {
     // console.log("Payload enviado al backend:", payload);
 
     const result = await Swal.fire({
-      title: "Seguro de que que quieres crear una orden y finalizar la compra?",
+      title: "Seguro de que que quieres finalizar la compra?",
       icon: "question",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -62,7 +62,7 @@ const CreateOrderBtn = () => {
     <>
       <button
         onClick={handleCreateOrder}
-        className="self-center rounded-full w-[80%] border-4 border-transparent bg-primary hover:border-secondary p-3 mb-5 transform"
+        className=" font-roboto-condensed text-lg self-center rounded-full w-[80%] bg-primary hover:opacity-70 p-3 mb-5 transform"
       >
         Finalizar Compra
       </button>

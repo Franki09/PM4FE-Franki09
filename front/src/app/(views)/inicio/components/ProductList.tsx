@@ -10,7 +10,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   if (!products || products.length === 0) {
     return (
       <div className="min-h-[45vh] text-center flex items-center justify-center">
-        <h2>No hay productos disponibles</h2>
+        <h2 className="font-oswald text-4xl">No hay productos disponibles</h2>
       </div>
     );
   }

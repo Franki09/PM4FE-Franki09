@@ -13,12 +13,12 @@ const CarritoPage = () => {
           <RenderProducts />
         </div>
         {/* //* Total */}
-        <div className="fixed -right-2 flex flex-col items-end gap-4 p-4 w-[45%] rounded-lg mt-4 mr-4 bg-neutral border-4 border-dark">
+        <div className="fixed -right-2 flex flex-col items-start justify-center gap-4 p-4 w-[45%] rounded-lg mt-4 mr-4 bg-neutral border-4 border-dark">
           <RenderTotal />
 
           <Link
             href="/inicio"
-            className="text-center self-center rounded-full w-[80%] border-transparent border-4 bg-secondary hover:border-primary transform p-2"
+            className="text-center self-center rounded-full w-[80%]  bg-secondary hover:opacity-80 transform p-2 font-roboto-condensed text-lg"
           >
             Continuar Comprando
           </Link>

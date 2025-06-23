@@ -25,7 +25,6 @@ export const getOrdersUser = async (token: string) => {
 export const postOrder = async (data: ICreateOrderPayload, token: string): Promise<IOrder> => {
   try {
     console.log("Enviando datos:", data); // Debug
-    console.log("API URL:", process.env.API_URL); // Debug
 
     const response = await axiosApiBack.post("/orders", data, {
       headers: {

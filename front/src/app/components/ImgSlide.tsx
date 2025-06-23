@@ -17,24 +17,42 @@ export default function ImgSlide() {
   };
 
   const images = [
-    "https://www.cronista.com/files/image/419/419139/61d3378d218ac.jpg",
-    "https://media.minutouno.com/p/933e3768d29e99327e71f2a7ebedbd2d/adjuntos/150/imagenes/042/419/0042419890/celulares.jpg",
-    "https://images.samsung.com/is/image/samsung/assets/latin/smartphones/galaxy-note20/s-pen/images/galaxy-note20_spen_microsoft_device02.png?$ORIGIN_PNG$",
-    "https://storage.googleapis.com/ezetradein-gs-cld/ezewholesale.com/image_prev_ui%20(3)%20(1)%201.webp",
-    "https://crediphoneco.com/wp-content/uploads/2024/07/Infixix-8-a-creedtio-en-bogota-celulares-1.png",
+    "https://i.ytimg.com/vi/CrOo4ukH4hw/maxresdefault.jpg",
+    "https://i0.wp.com/folou.co/wp-content/uploads/2020/12/Apple-multa-publicidad-enganosa.jpg?fit=1200%2C675&ssl=1",
+    "https://s.wsj.net/public/resources/images/BN-MW517_stern0_M_20160302103513.jpg",
+    "https://www.movilzona.es/app/uploads-movilzona.es/2024/01/conectar-dos-auriculares-movil.jpg",
+    "https://cdn.shopify.com/s/files/1/0414/9982/0194/files/IMG_7902_bc932d5b-5e81-4ce5-9546-644c7fc92e66_600x600.jpg?v=1638710744",
   ];
 
   return (
-    <div className="w-screen overflow-hidden pb-10 bg-blueish">
-      <h2 className="m-auto p-4 text-center text-3xl text-dark">Un vistazo a nuestros productos: </h2>
+    <div className="w-full overflow-hidden pb-10 bg-blueish">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-4xl font-oswald font-bold text-center text-gray-800 mb-8 pt-8">
+          Un vistazo rapido a nuestros productos
+        </h2>
 
-      <Slider {...settings}>
-        {images.map((src, index) => (
-          <div key={index} className="flex justify-center">
-            <Image src={src} alt={`Slide ${index}`} width={800} height={500} className="w-full h-[500px] " unoptimized />
-          </div>
-        ))}
-      </Slider>
+        <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <Slider {...settings}>
+            {images.map((src, index) => (
+              <div key={index} className="relative">
+                <div className="flex justify-center items-center h-[500px] bg-dark p-4">
+                  <Image
+                    src={src}
+                    alt={`Producto ${index + 1}`}
+                    width={800}
+                    height={500}
+                    className="max-w-full max-h-full object-contain rounded-lg"
+                    style={{
+                      filter: "drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1))",
+                    }}
+                    unoptimized
+                  />
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
     </div>
   );
 }

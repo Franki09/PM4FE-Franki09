@@ -8,13 +8,13 @@ import { FiLogIn } from "react-icons/fi";
 const GuestNavbar = () => {
   return (
     <nav className="bg-primary flex justify-between items-center p-1 px-14 ">
-      <Image src="/logoPagina.png" alt="Logo" className="h-24 w-24" width={40} height={40} />
+      <Image src="/LogoPagFinal.png" alt="Logo" className="h-24 w-24" width={40} height={40} />
       <ul className="flex gap-6">
         <li>
           <Link href="/inicio" className="group flex flex-col items-center relative text-dark">
             <div className="flex items-center gap-2">
-              <FaHome className="text-2xl" />
-              <span>Inicio</span>
+              <FaHome className="text-2xl " />
+              <span className="font-oswald text-2xl">Inicio</span>
             </div>
 
             {/* Línea inferior */}
@@ -23,13 +23,15 @@ const GuestNavbar = () => {
         </li>
 
         <li className="group flex flex-col items-center relative text-dark">
-          <div className="flex items-center gap-2">
-            <FiLogIn className="text-2xl" />
-            <Link href="/login">Iniciar Sesion</Link>
-          </div>
+          <Link href="/login" className="font-oswald">
+            <div className="flex items-center gap-2">
+              <FiLogIn className="text-2xl" />
+              <span className="font-oswald text-2xl">Iniciar Sesion</span>
+            </div>
 
-          {/* Línea inferior */}
-          <div className="h-1 w-0 bg-accent transition-all duration-300 group-hover:w-full mt-1"></div>
+            {/* Línea inferior */}
+            <div className="h-1 w-0 bg-accent transition-all duration-300 group-hover:w-full mt-1"></div>
+          </Link>
         </li>
       </ul>
     </nav>

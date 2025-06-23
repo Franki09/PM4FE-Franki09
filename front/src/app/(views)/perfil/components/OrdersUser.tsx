@@ -29,35 +29,37 @@ function OrdersUser() {
   }, [token]);
 
   if (orders === null) {
-    return <p>Cargando ordenes....</p>;
+    return <p className="font-roboto-condensed text-neutral text-lg">No se estan pudiendo cargar las ordenes por el momento</p>;
   }
   return (
     <>
       {orders.length > 0 ? (
         orders.map((order) => (
-          <div key={order.id} className="mb-4">
-            <h3 className=" text-secondary text-lg font-semibold underline pb-2">Orden #{order.id}</h3>
-            <p className="text-neutral">
+          <div key={order.id} className="mb-4 ml-2 w-[130%]">
+            <h3 className=" text-secondary text-2xl font-oswald font-semibold underline pb-2">Orden #{order.id}</h3>
+            <p className="text-neutral text-xl font-roboto-condensed">
               <strong className=" text-secondary">Estado:</strong> {order.status}
             </p>
-            <p className="text-neutral">
-              <strong className=" text-secondary">Fecha:</strong> {new Date(order.date).toLocaleDateString()}
+            <p className="text-neutral  text-xl font-roboto-condensed">
+              <strong className=" text-secondary ">Fecha:</strong> {new Date(order.date).toLocaleDateString()}
             </p>
             <ul className="text-neutral list-disc pl-5">
               {order.products.map((product) => (
-                <li key={product.id}>
+                <li key={product.id} className=" text-xl font-roboto-condensed">
                   (x1) {product.name} - <span className="text-accent"> ${product.price} </span>
                 </li>
               ))}
             </ul>
-            <p className="text-neutral mt-2 list-none text-xl">
+            <p className="text-neutral mt-2 list-none text-2xl font-roboto-condensed">
               <strong className="text-secondary">Total: </strong>
               <strong className="text-accent">${order.products.reduce((sum, product) => sum + product.price, 0)} </strong>
             </p>
           </div>
         ))
       ) : (
-        <p className="text-neutral">No has realizado ninguna orden aún. Agrega algo al carrito para poder crear una orden.</p>
+        <p className="font-roboto-condensed text-neutral text-lg">
+          No has realizado ninguna orden aún. Agrega algo al carrito para poder crear una orden.
+        </p>
       )}
     </>
   );

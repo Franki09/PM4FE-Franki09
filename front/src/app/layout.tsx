@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Unbounded, Oswald, Roboto_Condensed } from "next/font/google";
 import "../styles/reset.css";
 import "../styles/globals.css";
 
@@ -19,11 +19,31 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+//! Fuentes personalizadas
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+});
+
+const robotoCondensed = Roboto_Condensed({
+  variable: "--font-roboto-condensed",
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+});
+//! Fuentes personalizadas
+
 export const metadata: Metadata = {
   title: "L-tronics",
   description: "E-commerce M4",
   icons: {
-    icon: "/logoPestaña.png",
+    icon: "/LogoPestFinal.png",
   },
 };
 
@@ -34,7 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} `}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${unbounded.variable} ${oswald.variable} ${robotoCondensed.variable}`}
+      >
         <AuthProvider>
           <CartProvider>
             <ToastContainer />

@@ -15,16 +15,16 @@ const DataUser = () => {
 
   return (
     <>
-      <p className="text-neutral text-lg">
+      <p className="text-neutral font-roboto-condensed text-xl">
         <strong className="text-secondary">Nombre:</strong> {user.name}
       </p>
-      <p className="text-neutral text-lg">
+      <p className="text-neutral font-roboto-condensed text-xl">
         <strong className="text-secondary">Email:</strong> {user.email}
       </p>
-      <p className="text-neutral text-lg">
+      <p className="text-neutral font-roboto-condensed text-xl">
         <strong className="text-secondary">Dirección:</strong> {user.address}
       </p>
-      <p className="text-neutral text-lg">
+      <p className="text-neutral font-roboto-condensed text-xl">
         <strong className="text-secondary">Teléfono:</strong> {user.phone}
       </p>
     </>

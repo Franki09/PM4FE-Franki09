@@ -7,9 +7,9 @@ const LoginPage = () => {
   return (
     <div className=" w-screen h-screen flex ">
       <div className="w-1/2 flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold text-center">Login</h1>
+        <h1 className="text-3xl font-unbounded font-bold text-center text-dark">Login</h1>
         <LoginForm />
-        <Link href="/register" className="text-blue-600 hover:underline mt-4">
+        <Link href="/register" className="text-secondary hover:underline mt-4 font-roboto-condensed text-lg">
           ¿No tienes una cuenta? Regístrate aquí
         </Link>
       </div>

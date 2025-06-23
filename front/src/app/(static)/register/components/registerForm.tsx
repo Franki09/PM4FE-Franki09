@@ -16,11 +16,11 @@ export interface RegisterFormValues {
 }
 
 const initialValues: RegisterFormValues = {
-  name: "Franco Gomez Rosell",
-  email: "fran@gmail.com",
-  password: "Franki123",
-  address: "Avenida Calle Falsa 123",
-  phone: "12345678",
+  name: "",
+  email: "",
+  password: "",
+  address: "",
+  phone: "",
 };
 
 const validationSchema = Yup.object({
@@ -63,58 +63,55 @@ const RegisterForm: NextPage = () => {
   return (
     <div className="bg-dark rounded-md shadow-lg p-6 max-w-md mx-auto mt-5">
       <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
-        {/* {({ isValid, dirty }) => ( */}
         <Form>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <div className="flex flex-col gap-4">
               <div>
-                <label htmlFor="name" className="block mb-1 font-medium text-white">
+                <label htmlFor="name" className="block mb-1 font-medium text-primary font-oswald text-xl">
                   Nombre
                 </label>
-                <Field name="name" type="text" className="w-full border rounded px-3 py-2 bg-blueish" />
+                <Field name="name" type="text" className="w-full border rounded px-3 py-2 bg-secondary text-dark" />
                 <ErrorMessage name="name" component="div" className="text-red-500 text-sm mt-1" />
               </div>
               <div>
-                <label htmlFor="email" className="block mb-1 font-medium text-white">
+                <label htmlFor="email" className="block mb-1 font-medium text-primary font-oswald text-xl">
                   Correo
                 </label>
-                <Field name="email" type="email" className="w-full border rounded px-3 py-2 bg-blueish" />
+                <Field name="email" type="email" className="w-full border rounded px-3 py-2 bg-secondary text-dark" />
                 <ErrorMessage name="email" component="div" className="text-red-500 text-sm mt-1" />
               </div>
               <div>
-                <label htmlFor="password" className="block mb-1 font-medium text-white">
+                <label htmlFor="password" className="block mb-1 font-medium text-primary font-oswald text-xl">
                   Contraseña
                 </label>
-                <Field name="password" type="password" className="w-full border rounded px-3 py-2 bg-blueish" />
+                <Field name="password" type="password" className="w-full border rounded px-3 py-2 bg-secondary text-dark" />
                 <ErrorMessage name="password" component="div" className="text-red-500 text-sm mt-1" />
               </div>
             </div>
             <div className="flex flex-col gap-4">
               <div>
-                <label htmlFor="address" className="block mb-1 font-medium text-white">
+                <label htmlFor="address" className="block mb-1 font-medium text-primary font-oswald text-xl">
                   Dirección
                 </label>
-                <Field name="address" type="text" className="w-full border rounded px-3 py-2 bg-blueish" />
+                <Field name="address" type="text" className="w-full border rounded px-3 py-2 bg-secondary text-dark" />
                 <ErrorMessage name="address" component="div" className="text-red-500 text-sm mt-1" />
               </div>
               <div>
-                <label htmlFor="phone" className="block mb-1 font-medium text-white">
+                <label htmlFor="phone" className="block mb-1 font-medium text-primary font-oswald text-xl">
                   Teléfono
                 </label>
-                <Field name="phone" type="text" className="w-full border rounded px-3 py-2 bg-blueish" />
+                <Field name="phone" type="text" className="w-full border rounded px-3 py-2 bg-secondary text-dark" />
                 <ErrorMessage name="phone" component="div" className="text-red-500 text-sm mt-1" />
               </div>
             </div>
           </div>
           <button
             type="submit"
-            // disabled={!(isValid && dirty)}
-            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-primary text-neutral py-2 rounded hover:bg-opacity-60 transition font-roboto-condensed text-xl"
           >
             Registrar
           </button>
         </Form>
-        {/* )} */}
       </Formik>
     </div>
   );

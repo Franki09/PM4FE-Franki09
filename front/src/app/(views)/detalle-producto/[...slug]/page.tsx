@@ -17,9 +17,9 @@ export default async function ProductDetail(props: { params: Params; searchParam
   const product = await getProductById(id);
 
   return (
-    <>
-      <div className="max-w-3xl mx-auto my-5 bg-dark rounded-lg p-8 border-4 border-primary">
-        <h1 className="text-3xl font-bold text-primary mb-8 text-center">Detalle del producto</h1>
+    <div className="relative min-h-screen pt-10">
+      <h1 className="text-4xl font-bold text-dark mb-8 text-center font-unbounded">Detalle del producto</h1>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60%] bg-dark rounded-lg p-8 border-4 border-accent">
         {product ? (
           <div className="flex flex-col md:flex-row items-center gap-8">
             <Image
@@ -32,16 +32,16 @@ export default async function ProductDetail(props: { params: Params; searchParam
             />
 
             <div className="flex-1">
-              <h2 className="text-2xl font-semibold text-secondary mb-4">{product.name}</h2>
-              <p className="text-gray-700 mb-4">{product.description}</p>
-              <div className="flex items-center gap-6 mb-4">
-                <span className="text-lg font-bold text-primary">Precio: ${product.price}</span>
+              <h2 className="text-3xl font-semibold text-primary mb-4 font-oswald">{product.name}</h2>
+              <p className="text-neutral mb-4 font-roboto-condensed text-lg">{product.description}</p>
+              <div className="flex items-center gap-6 mb-8">
+                <span className="text-2xl font-bold text-accent font-oswald">Precio: ${product.price}</span>
                 <span
-                  className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    product.stock > 0 ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+                  className={`px-3 py-1 rounded-full text-lg font-medium font-roboto-condensed ${
+                    product.stock > 0 ? "bg-blueish text-dark" : "bg-blueish text-red-700"
                   }`}
                 >
-                  {product.stock > 0 ? `Stock: ${product.stock}` : "Sin stock"}
+                  {product.stock > 0 ? `Stock: ${product.stock}` : "Stock 0"}
                 </span>
               </div>
               <CartAddBtn product={product} />
@@ -51,6 +51,6 @@ export default async function ProductDetail(props: { params: Params; searchParam
           <p className="text-center text-lg text-red-500 font-semibold">Producto no encontrado</p>
         )}
       </div>
-    </>
+    </div>
   );
 }
