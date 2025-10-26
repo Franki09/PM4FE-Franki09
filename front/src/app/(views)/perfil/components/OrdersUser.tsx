@@ -34,9 +34,6 @@ function OrdersUser() {
 
   return (
     <>
-      <div>
-        <h1>Hola</h1>
-      </div>
       {orders.length > 0 ? (
         orders.map((order) => (
           <div key={order.id} className="mb-4 ml-2 w-[130%]">
