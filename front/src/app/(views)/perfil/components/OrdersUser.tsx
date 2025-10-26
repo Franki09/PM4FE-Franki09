@@ -31,8 +31,12 @@ function OrdersUser() {
   if (orders === null) {
     return <p className="font-roboto-condensed text-neutral text-lg">No se estan pudiendo cargar las ordenes por el momento</p>;
   }
+
   return (
     <>
+      <div>
+        <h1>Hola</h1>
+      </div>
       {orders.length > 0 ? (
         orders.map((order) => (
           <div key={order.id} className="mb-4 ml-2 w-[130%]">

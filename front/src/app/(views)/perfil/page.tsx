@@ -12,6 +12,7 @@ const Perfil = () => {
 
       <div className=" bg-dark border-4 border-accent shadow-md rounded-lg p-6">
         <h2 className=" text-primary text-3xl font-oswald font-semibold mb-4 py-2">Órdenes Realizadas</h2>
+        <h3> Hola</h3>
         <div className="grid grid-cols-3 gap-7">
           <OrdersUser />
         </div>
